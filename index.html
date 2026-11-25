@@ -1,0 +1,1362 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>擦边视频无打马_无马赛克擦边短视频_擦边内容审核标准</title>
+<meta name="description" content="擦边视频无打马聚焦无马赛克擦边短视频的审核标准、平台规则与内容分级，梳理作品条目、更新动态、类型差异与判断依据，适合内容审核、创作者与短视频重度用户参考。">
+<meta name="keywords" content="无马赛克短视频,擦边内容分级,平台审核规则,短视频合规,内容边界判断">
+<style>
+:root{
+  --bg:#0e0f13;
+  --bg-soft:#15171d;
+  --panel:#1a1d25;
+  --panel-2:#20242e;
+  --line:#2b303c;
+  --line-soft:#242833;
+  --text:#e8eaf0;
+  --text-2:#a8afc0;
+  --text-3:#767e91;
+  --brand:#ff4d6d;
+  --brand-2:#ff8a3d;
+  --accent:#38d9c4;
+  --accent-2:#7c8cff;
+  --warn:#ffb020;
+  --radius:14px;
+  --radius-sm:9px;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+  --header-h:60px;
+  --notice-h:40px;
+  --max:1320px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(1100px 500px at 80% -120px, rgba(255,77,109,.16), transparent 60%),
+    radial-gradient(900px 460px at 0% -80px, rgba(56,217,196,.10), transparent 55%),
+    var(--bg);
+  color:var(--text);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:15px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+
+/* ---------- 吸顶公告条 ---------- */
+.notice{
+  position:sticky;top:0;z-index:60;
+  height:var(--notice-h);
+  display:flex;align-items:center;
+  background:linear-gradient(90deg,rgba(255,77,109,.22),rgba(124,140,255,.18) 55%,rgba(56,217,196,.16));
+  border-bottom:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(10px);
+  font-size:13px;
+}
+.notice .wrap{
+  max-width:var(--max);margin:0 auto;padding:0 20px;
+  display:flex;align-items:center;gap:12px;width:100%;overflow:hidden;
+}
+.notice .dot{
+  width:7px;height:7px;border-radius:50%;background:var(--accent);
+  box-shadow:0 0 0 4px rgba(56,217,196,.18);flex:none;
+}
+.notice b{color:#fff;font-weight:600}
+.notice .nt-text{color:var(--text-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.notice a.go{
+  margin-left:auto;flex:none;color:#fff;font-size:12px;
+  border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:2px 11px;
+  transition:.2s;white-space:nowrap;
+}
+.notice a.go:hover{background:rgba(255,255,255,.14)}
+
+/* ---------- 页头 ---------- */
+.site-header{
+  position:sticky;top:var(--notice-h);z-index:55;
+  background:rgba(14,15,19,.88);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line-soft);
+}
+.hd-inner{
+  max-width:var(--max);margin:0 auto;padding:0 20px;
+  height:var(--header-h);display:flex;align-items:center;gap:22px;
+}
+.logo{display:flex;align-items:center;gap:10px;flex:none}
+.logo-mark{width:32px;height:32px;flex:none}
+.logo-text{font-size:17px;font-weight:800;letter-spacing:.5px;white-space:nowrap}
+.logo-text em{font-style:normal;color:var(--brand)}
+.hd-nav{display:flex;gap:4px;flex:1;overflow:hidden}
+.hd-nav a{
+  font-size:13.5px;color:var(--text-2);padding:6px 10px;border-radius:8px;
+  white-space:nowrap;transition:.18s;
+}
+.hd-nav a:hover{color:#fff;background:var(--panel-2)}
+.hd-tools{display:flex;align-items:center;gap:10px;flex:none}
+.search-box{
+  display:flex;align-items:center;gap:6px;
+  background:var(--panel);border:1px solid var(--line);
+  border-radius:999px;padding:4px 6px 4px 12px;
+}
+.search-box input{
+  width:150px;background:none;border:none;color:var(--text);
+  font-size:13px;outline:none;padding:4px 0;
+}
+.search-box input::placeholder{color:var(--text-3)}
+.search-box button{
+  background:var(--brand);color:#fff;font-size:12.5px;font-weight:600;
+  padding:5px 13px;border-radius:999px;transition:.2s;
+}
+.search-box button:hover{background:#ff3358}
+.btn-ghost{
+  font-size:13px;color:var(--text-2);border:1px solid var(--line);
+  padding:6px 13px;border-radius:999px;transition:.2s;white-space:nowrap;
+}
+.btn-ghost:hover{color:#fff;border-color:var(--brand);background:rgba(255,77,109,.1)}
+.menu-toggle{display:none;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:13px}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  max-width:var(--max);margin:0 auto;padding:44px 20px 40px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;color:var(--accent);letter-spacing:1px;
+  border:1px solid rgba(56,217,196,.3);border-radius:999px;padding:4px 12px;
+  background:rgba(56,217,196,.07);margin-bottom:18px;
+}
+.hero h1{
+  font-size:clamp(30px,3.6vw,46px);letter-spacing:-.5px;line-height:1.2;
+  margin-bottom:16px;
+}
+.hero h1 span{
+  background:linear-gradient(96deg,var(--brand),var(--brand-2) 60%,var(--accent));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-desc{color:var(--text-2);font-size:15px;max-width:560px;margin-bottom:24px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn-primary{
+  background:linear-gradient(96deg,var(--brand),#ff6b3d);
+  color:#fff;font-weight:600;font-size:14px;
+  padding:11px 24px;border-radius:999px;box-shadow:0 8px 22px rgba(255,77,109,.28);
+  transition:.2s;display:inline-block;
+}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(255,77,109,.38)}
+.btn-secondary{
+  border:1px solid var(--line);color:var(--text-2);font-size:14px;
+  padding:11px 22px;border-radius:999px;transition:.2s;display:inline-block;
+}
+.btn-secondary:hover{color:#fff;border-color:var(--accent);background:rgba(56,217,196,.08)}
+.hero-stats{display:flex;gap:26px;margin-top:30px;flex-wrap:wrap}
+.hero-stats div strong{display:block;font-size:20px;color:#fff;font-weight:800;letter-spacing:.5px}
+.hero-stats div span{font-size:12.5px;color:var(--text-3)}
+
+/* 首屏视觉 */
+.hero-visual{position:relative;min-height:330px}
+.hv-frame{
+  position:absolute;border-radius:16px;overflow:hidden;border:1px solid var(--line);
+  box-shadow:var(--shadow);background:var(--panel);
+}
+.hv-main{
+  inset:0 40px 46px 0;z-index:2;
+}
+.hv-main img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.05)}
+.hv-main::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 40%,rgba(14,15,19,.85));
+}
+.hv-badge{
+  position:absolute;left:14px;bottom:14px;z-index:3;
+  display:flex;align-items:center;gap:8px;
+  background:rgba(14,15,19,.72);border:1px solid rgba(255,255,255,.14);
+  border-radius:999px;padding:5px 13px;font-size:12px;color:#fff;backdrop-filter:blur(6px);
+}
+.hv-badge i{width:6px;height:6px;border-radius:50%;background:var(--brand);display:block}
+.hv-side{
+  right:0;bottom:0;width:46%;aspect-ratio:3/4;z-index:3;
+  animation:float 6s ease-in-out infinite;
+}
+.hv-side img{width:100%;height:100%;object-fit:cover}
+.hv-chip{
+  position:absolute;top:6px;left:-38px;z-index:4;
+  background:var(--panel-2);border:1px solid var(--line);border-radius:12px;
+  padding:10px 14px;font-size:12px;color:var(--text-2);box-shadow:var(--shadow);
+  animation:float 7s ease-in-out infinite reverse;
+}
+.hv-chip b{color:var(--accent);font-size:15px;display:block;letter-spacing:.5px}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+
+/* ---------- 布局 ---------- */
+.layout{
+  max-width:var(--max);margin:0 auto;padding:0 20px 70px;
+  display:grid;grid-template-columns:190px minmax(0,1fr) 268px;gap:30px;
+  align-items:start;
+}
+section[id]{scroll-margin-top:calc(var(--notice-h) + var(--header-h) + 16px)}
+
+/* 左频道栏 */
+.side-left{position:sticky;top:calc(var(--notice-h) + var(--header-h) + 18px)}
+.side-card{
+  background:var(--panel);border:1px solid var(--line-soft);
+  border-radius:var(--radius);padding:16px 14px;margin-bottom:16px;
+}
+.side-title{
+  font-size:11.5px;letter-spacing:1.6px;color:var(--text-3);
+  text-transform:uppercase;margin-bottom:12px;font-weight:600;
+}
+.chan-list li+li{margin-top:2px}
+.chan-list a{
+  display:flex;align-items:center;justify-content:space-between;gap:6px;
+  font-size:13.5px;color:var(--text-2);padding:7px 10px;border-radius:8px;
+  transition:.16s;
+}
+.chan-list a:hover{background:var(--panel-2);color:#fff}
+.chan-list a.on{background:rgba(255,77,109,.14);color:#fff}
+.chan-list a.on::before{
+  content:"";width:3px;height:14px;border-radius:2px;background:var(--brand);
+  margin-right:-2px;
+}
+.chan-list .n{font-size:11px;color:var(--text-3)}
+
+/* 右辅助栏 */
+.side-right{position:sticky;top:calc(var(--notice-h) + var(--header-h) + 18px)}
+.rank-list li{display:flex;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line-soft);font-size:13.5px}
+.rank-list li:last-child{border-bottom:none}
+.rank-no{
+  width:19px;height:19px;flex:none;border-radius:6px;font-size:11.5px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--panel-2);color:var(--text-3);margin-top:2px;
+}
+.rank-list li:nth-child(1) .rank-no{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff}
+.rank-list li:nth-child(2) .rank-no{background:rgba(255,176,32,.85);color:#1a1200}
+.rank-list li:nth-child(3) .rank-no{background:rgba(124,140,255,.75);color:#fff}
+.rank-list .rk-main{min-width:0}
+.rank-list .rk-main b{display:block;font-size:13.5px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rank-list .rk-main span{font-size:11.5px;color:var(--text-3)}
+.update-feed li{font-size:13px;padding:8px 0;border-bottom:1px dashed var(--line-soft);color:var(--text-2)}
+.update-feed li:last-child{border-bottom:none}
+.update-feed b{color:var(--text);font-weight:600}
+.update-feed time{display:block;font-size:11.5px;color:var(--text-3);margin-top:1px}
+
+/* ---------- 主内容通用 ---------- */
+.main-col{min-width:0}
+.block{margin-bottom:46px}
+.block-head{
+  display:flex;align-items:flex-end;justify-content:space-between;gap:14px;
+  margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--line-soft);
+}
+.block-head h2{font-size:21px;letter-spacing:-.2px}
+.block-head h2 small{
+  font-size:12.5px;font-weight:400;color:var(--text-3);margin-left:10px;letter-spacing:0;
+}
+.block-head .more{font-size:12.5px;color:var(--text-3);white-space:nowrap;transition:.2s}
+.block-head .more:hover{color:var(--brand)}
+.lead{color:var(--text-2);font-size:14.5px;margin-bottom:18px}
+
+/* 概览 */
+.overview{
+  background:linear-gradient(160deg,var(--panel),var(--bg-soft));
+  border:1px solid var(--line-soft);border-radius:var(--radius);
+  padding:24px 26px;
+}
+.overview p{color:var(--text-2);font-size:14.5px;margin-bottom:13px}
+.overview p:last-child{margin-bottom:0}
+.overview strong{color:#fff;font-weight:600}
+.overview .mark{color:var(--accent)}
+
+/* 精选卡片 */
+.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius);
+  overflow:hidden;transition:.22s;display:flex;flex-direction:column;
+}
+.card:hover{border-color:rgba(255,77,109,.45);transform:translateY(-3px);box-shadow:var(--shadow)}
+.card-cover{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--panel-2)}
+.card-cover img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.card:hover .card-cover img{transform:scale(1.05)}
+.card-type{
+  position:absolute;top:9px;left:9px;font-size:11px;font-weight:600;
+  background:rgba(14,15,19,.78);border:1px solid rgba(255,255,255,.16);
+  color:#fff;padding:2px 9px;border-radius:999px;backdrop-filter:blur(4px);
+}
+.card-score{
+  position:absolute;bottom:9px;right:9px;font-size:12px;font-weight:700;
+  color:var(--warn);background:rgba(14,15,19,.8);padding:2px 8px;border-radius:6px;
+}
+.card-body{padding:13px 14px 15px;display:flex;flex-direction:column;flex:1}
+.card-body h3{font-size:14.5px;margin-bottom:7px;line-height:1.45}
+.card-body p{font-size:12.8px;color:var(--text-2);line-height:1.65;flex:1}
+.card-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:11px}
+.tag{
+  font-size:11px;color:var(--text-3);border:1px solid var(--line);
+  padding:1px 8px;border-radius:999px;white-space:nowrap;
+}
+.tag.hot{color:var(--brand);border-color:rgba(255,77,109,.4);background:rgba(255,77,109,.08)}
+.card-meta{
+  display:flex;justify-content:space-between;font-size:11.5px;color:var(--text-3);
+  margin-top:10px;padding-top:9px;border-top:1px dashed var(--line-soft);
+}
+
+/* 动态列表 */
+.feed-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 26px}
+.feed-item{
+  display:flex;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line-soft);
+  align-items:flex-start;
+}
+.feed-item:hover .fi-name{color:var(--brand)}
+.feed-time{font-size:11.5px;color:var(--text-3);flex:none;width:66px;padding-top:2px}
+.fi-main{min-width:0}
+.fi-name{font-size:14px;font-weight:600;transition:.16s;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.fi-name .badge-new{
+  font-size:10px;font-weight:700;color:#fff;background:var(--brand);
+  border-radius:4px;padding:0 5px;line-height:15px;
+}
+.fi-desc{font-size:12.5px;color:var(--text-2);margin-top:2px;line-height:1.6}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.cat-item{
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+  padding:14px 15px;transition:.2s;
+}
+.cat-item:hover{border-color:var(--accent);background:var(--panel-2);transform:translateY(-2px)}
+.cat-item b{font-size:14px;display:block;margin-bottom:4px}
+.cat-item span{font-size:11.5px;color:var(--text-3);line-height:1.55;display:block}
+.cat-item .cnt{font-size:11px;color:var(--accent);margin-top:7px;display:block}
+
+/* 深度解析 */
+.article{
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius);
+  padding:30px 34px;
+}
+.article h3{
+  font-size:17px;margin:28px 0 12px;padding-left:12px;
+  border-left:3px solid var(--brand);line-height:1.4;
+}
+.article h3:first-child{margin-top:0}
+.article p{color:var(--text-2);font-size:14.5px;margin-bottom:13px}
+.article strong{color:#fff;font-weight:600}
+.article ul{margin:0 0 14px;padding-left:2px}
+.article ul li{
+  color:var(--text-2);font-size:14px;padding-left:18px;position:relative;margin-bottom:7px;
+}
+.article ul li::before{
+  content:"";position:absolute;left:4px;top:10px;width:5px;height:5px;
+  border-radius:50%;background:var(--brand-2);
+}
+.article .cmp{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:14px 0 18px;
+}
+.article .cmp div{
+  background:var(--bg-soft);border:1px solid var(--line-soft);border-radius:10px;padding:13px 15px;
+}
+.article .cmp b{font-size:13px;display:block;margin-bottom:5px;color:var(--accent)}
+.article .cmp span{font-size:12.5px;color:var(--text-2);line-height:1.65}
+
+/* 指南步骤 */
+.steps{counter-reset:s;display:grid;gap:12px}
+.step{
+  counter-increment:s;display:flex;gap:16px;align-items:flex-start;
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+  padding:16px 18px;
+}
+.step::before{
+  content:counter(s,decimal-leading-zero);
+  font-size:17px;font-weight:800;color:var(--brand);
+  font-family:ui-monospace,Menlo,monospace;flex:none;line-height:1.4;
+}
+.step b{display:block;font-size:14.5px;margin-bottom:3px}
+.step span{font-size:13px;color:var(--text-2);line-height:1.7}
+
+/* FAQ */
+.faq details{
+  background:var(--panel);border:1px solid var(--line-soft);
+  border-radius:var(--radius-sm);margin-bottom:10px;overflow:hidden;
+}
+.faq details[open]{border-color:rgba(255,77,109,.35)}
+.faq summary{
+  cursor:pointer;padding:14px 18px;font-size:14.5px;font-weight:600;
+  display:flex;align-items:center;gap:10px;list-style:none;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{
+  content:"Q";font-size:11px;font-weight:800;color:var(--brand);
+  border:1px solid rgba(255,77,109,.4);border-radius:5px;
+  width:19px;height:19px;display:flex;align-items:center;justify-content:center;flex:none;
+}
+.faq summary::after{
+  content:"+";margin-left:auto;color:var(--text-3);font-size:17px;font-weight:400;
+}
+.faq details[open] summary::after{content:"−";color:var(--brand)}
+.faq .ans{padding:0 18px 16px 47px;font-size:13.5px;color:var(--text-2);line-height:1.8}
+
+/* 评论 */
+.comment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.cm{
+  background:var(--panel);border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+  padding:13px 15px;
+}
+.cm-head{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+.avatar{
+  width:26px;height:26px;border-radius:50%;flex:none;
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:700;color:#fff;
+}
+.cm-name{font-size:12.5px;font-weight:600}
+.cm-time{font-size:11px;color:var(--text-3);margin-left:auto}
+.cm-text{font-size:13px;color:var(--text-2);line-height:1.7}
+.cm-text b{color:var(--text);font-weight:600}
+
+/* 资讯 */
+.news-list{display:grid;gap:12px}
+.news-item{
+  display:flex;gap:16px;background:var(--panel);border:1px solid var(--line-soft);
+  border-radius:var(--radius-sm);overflow:hidden;transition:.2s;
+}
+.news-item:hover{border-color:rgba(124,140,255,.4)}
+.news-thumb{width:150px;aspect-ratio:3/2;flex:none;overflow:hidden;background:var(--panel-2)}
+.news-thumb img{width:100%;height:100%;object-fit:cover}
+.news-body{padding:13px 16px 13px 0;min-width:0}
+.news-body h3{font-size:14.5px;margin-bottom:5px}
+.news-body p{font-size:12.8px;color:var(--text-2);line-height:1.65}
+.news-meta{font-size:11.5px;color:var(--text-3);margin-top:7px;display:flex;gap:12px;flex-wrap:wrap}
+
+/* 相关推荐 */
+.reco-wrap{display:flex;flex-wrap:wrap;gap:9px}
+.reco{
+  font-size:13px;color:var(--text-2);border:1px solid var(--line);
+  border-radius:999px;padding:6px 15px;transition:.18s;background:var(--panel);
+}
+.reco:hover{color:#fff;border-color:var(--accent);background:rgba(56,217,196,.1)}
+.reco b{color:var(--accent);font-weight:600}
+
+/* 时间线 */
+.timeline{position:relative;padding-left:22px}
+.timeline::before{
+  content:"";position:absolute;left:5px;top:6px;bottom:6px;width:1px;
+  background:linear-gradient(180deg,var(--brand),var(--line) 70%);
+}
+.tl-item{position:relative;padding-bottom:18px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{
+  content:"";position:absolute;left:-21px;top:6px;width:9px;height:9px;border-radius:50%;
+  background:var(--panel);border:2px solid var(--brand);
+}
+.tl-date{font-size:11.5px;color:var(--brand);font-weight:600;letter-spacing:.4px}
+.tl-item b{display:block;font-size:14px;margin:2px 0 3px}
+.tl-item span{font-size:12.8px;color:var(--text-2);line-height:1.65}
+
+/* 搜索无结果 */
+.search-empty{
+  display:none;background:var(--panel);border:1px dashed var(--line);
+  border-radius:var(--radius-sm);padding:26px;text-align:center;color:var(--text-3);font-size:14px;
+}
+.search-empty.on{display:block}
+
+/* ---------- 页尾 ---------- */
+.site-footer{
+  border-top:1px solid var(--line-soft);
+  background:linear-gradient(180deg,var(--bg-soft),#0a0b0e);
+  padding:46px 20px 26px;
+}
+.ft-inner{max-width:var(--max);margin:0 auto}
+.ft-top{
+  display:grid;grid-template-columns:1.4fr repeat(3,minmax(0,1fr));gap:34px;
+  padding-bottom:32px;border-bottom:1px solid var(--line-soft);
+}
+.ft-brand .logo{margin-bottom:12px}
+.ft-brand p{font-size:13px;color:var(--text-3);line-height:1.8;max-width:300px}
+.ft-col h4{font-size:13px;margin-bottom:12px;color:#fff}
+.ft-col li+li{margin-top:7px}
+.ft-col a{font-size:12.8px;color:var(--text-3);transition:.16s}
+.ft-col a:hover{color:var(--brand)}
+.ft-bottom{
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  padding-top:20px;font-size:12px;color:var(--text-3);line-height:1.9;
+}
+.ft-bottom .disc{max-width:600px}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1180px){
+  .layout{grid-template-columns:180px minmax(0,1fr) 240px;gap:22px}
+  .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:1024px){
+  .hd-nav{display:none}
+  .menu-toggle{display:block}
+  .hd-nav.open{
+    display:flex;position:absolute;top:var(--header-h);left:0;right:0;
+    background:var(--panel);border-bottom:1px solid var(--line);
+    padding:12px 16px;flex-wrap:wrap;gap:6px;z-index:50;
+  }
+  .layout{grid-template-columns:minmax(0,1fr) 260px;gap:24px}
+  .side-left{
+    position:static;grid-column:1 / -1;order:-1;
+  }
+  .side-left .side-card{padding:12px}
+  .chan-list{display:flex;flex-wrap:wrap;gap:6px}
+  .chan-list li+li{margin-top:0}
+  .chan-list a{border:1px solid var(--line);padding:5px 12px;font-size:12.5px}
+  .chan-list a.on::before{display:none}
+  .hero{grid-template-columns:1fr;gap:34px;padding-top:34px}
+  .hero-visual{min-height:280px;max-width:480px}
+  .article{padding:24px 22px}
+  .article .cmp{grid-template-columns:1fr}
+}
+@media (max-width:740px){
+  :root{--notice-h:auto}
+  .notice{height:auto;padding:7px 0;font-size:12px}
+  .notice .wrap{padding:0 14px;gap:8px}
+  .notice .nt-text{white-space:normal;line-height:1.5}
+  .notice a.go{display:none}
+  .hd-inner{padding:0 14px;gap:12px}
+  .search-box{display:none}
+  .btn-ghost.hide-sm{display:none}
+  .layout{grid-template-columns:minmax(0,1fr);padding:0 14px 50px;gap:24px}
+  .side-right{position:static}
+  .card-grid{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .feed-list{grid-template-columns:1fr;gap:0}
+  .comment-grid{grid-template-columns:1fr}
+  .news-thumb{width:104px}
+  .news-body{padding:11px 12px 11px 0}
+  .hero{padding:26px 14px 30px}
+  .hero-stats{gap:18px}
+  .hero-visual{min-height:240px}
+  .hv-chip{left:-8px;font-size:11px;padding:7px 11px}
+  .article{padding:20px 16px}
+  .ft-top{grid-template-columns:1fr 1fr;gap:24px}
+  .ft-brand{grid-column:1 / -1}
+  .ft-bottom{flex-direction:column}
+  .block-head h2{font-size:18px}
+  .block-head h2 small{display:block;margin:4px 0 0}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="notice">
+  <div class="wrap">
+    <span class="dot" aria-hidden="true"></span>
+    <span class="nt-text"><b>今日更新 14 条</b>　11 月 24 日新解封《夜航漫游》第 3 季完整版，审核规则第 6 条细则同步更新</span>
+    <a class="go" href="/#feed">查看动态</a>
+  </div>
+</div>
+
+<!-- 页头 -->
+<header class="site-header">
+  <div class="hd-inner">
+    <a class="logo" href="/#top" aria-label="擦边视频无打马 首页">
+      <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <defs>
+          <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ff4d6d"/>
+            <stop offset="1" stop-color="#ff8a3d"/>
+          </linearGradient>
+        </defs>
+        <rect x="2" y="8" width="36" height="24" rx="7" fill="none" stroke="url(#lg1)" stroke-width="2.4"/>
+        <path d="M16 15.5 L26 20 L16 24.5 Z" fill="url(#lg1)"/>
+        <path d="M30 4 L34 8 M10 4 L6 8" stroke="#38d9c4" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span class="logo-text">擦边视频<em>无打马</em></span>
+    </a>
+
+    <nav class="hd-nav" id="hdNav" aria-label="主题导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#picks">精选条目</a>
+      <a href="/#feed">更新动态</a>
+      <a href="/#category">分类</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#news">相关资讯</a>
+    </nav>
+
+    <div class="hd-tools">
+      <div class="search-box">
+        <input id="searchInput" type="search" placeholder="搜索条目 / 类型 / 规则" aria-label="站内搜索">
+        <button id="searchBtn" type="button">查找</button>
+      </div>
+      <a class="btn-ghost hide-sm" href="/#timeline">条目时间线</a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="hdNav">菜单</button>
+    </div>
+  </div>
+</header>
+
+<!-- 首屏 -->
+<section class="hero" id="top">
+  <div>
+    <span class="hero-kicker">内容审核 · 分级与边界</span>
+    <h1>擦边视频无打马<span>内容档案与判断手册</span></h1>
+    <p class="hero-desc">
+      这里系统整理无马赛克擦边短视频的完整条目：从平台审核细则、画面边界判定，到具体作品的可看性与下架记录。适合内容审核从业者、短视频创作者，以及想搞清楚“什么算擦边、什么会被限流”的重度用户。
+    </p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="/#picks">浏览精选条目</a>
+      <a class="btn-secondary" href="/#deep">读审核标准解析</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong>1,286</strong><span>收录条目</span></div>
+      <div><strong>42</strong><span>平台审核细则</span></div>
+      <div><strong>今日 14</strong><span>新增与变更</span></div>
+    </div>
+  </div>
+
+  <div class="hero-visual" aria-hidden="true">
+    <div class="hv-frame hv-main">
+      <img src="https://picsum.photos/seed/cabian-dangan21/800/600" width="800" height="600" alt="无马赛克擦边短视频条目档案封面" loading="eager">
+      <div class="hv-badge"><i></i>今日解封 · 《夜航漫游》第 3 季</div>
+    </div>
+    <div class="hv-frame hv-side">
+      <img src="https://picsum.photos/seed/cabian-fengmian08/400/600" width="400" height="600" alt="擦边内容分级判定示意的纵向封面" loading="lazy">
+    </div>
+    <div class="hv-chip"><b>审核细则 v6.2</b>边界判定更新</div>
+  </div>
+</section>
+
+<!-- 三栏布局 -->
+<div class="layout">
+
+  <!-- 左频道栏 -->
+  <aside class="side-left">
+    <div class="side-card">
+      <p class="side-title">内容频道</p>
+      <ul class="chan-list">
+        <li><a class="on" href="/#overview">审核规则<span class="n">312</span></a></li>
+        <li><a href="/#picks">作品条目<span class="n">468</span></a></li>
+        <li><a href="/#feed">更新与下架<span class="n">126</span></a></li>
+        <li><a href="/#category">内容分级<span class="n">88</span></a></li>
+        <li><a href="/#deep">画面边界<span class="n">174</span></a></li>
+        <li><a href="/#guide">消费路径<span class="n">61</span></a></li>
+        <li><a href="/#faq">常见问答<span class="n">42</span></a></li>
+        <li><a href="/#news">行业动态<span class="n">35</span></a></li>
+        <li><a href="/#timeline">条目时间线<span class="n">—</span></a></li>
+        <li><a href="/#reco">延伸方向<span class="n">—</span></a></li>
+      </ul>
+    </div>
+    <div class="side-card">
+      <p class="side-title">口径说明</p>
+      <p style="font-size:12.5px;color:var(--text-3);line-height:1.8">
+        条目状态按平台公示、创作者自述与社区复核三源交叉标注。规则条款以各平台 2026 年 11 月版细则为准。
+      </p>
+    </div>
+  </aside>
+
+  <!-- 主内容 -->
+  <main class="main-col" id="main">
+
+    <!-- 1 领域概览 -->
+    <section class="block" id="overview">
+      <div class="block-head">
+        <h2>领域概览：无马赛克擦边内容到底包含什么</h2>
+      </div>
+      <div class="overview">
+        <p>
+          所谓“擦边视频无打马”，指的是一类不做遮挡处理、但又不直接触犯明示红线的短视频内容。它并不是一个单一品类，而是横跨<strong>穿搭展示、舞蹈跟拍、剧情短剧、生活记录、直播切片</strong>五个主要方向的灰色地带。判断一条内容是否属于此列，看的从来不是题材本身，而是<strong class="mark">镜头语言、服装覆盖度、动作幅度与场景暗示</strong>四个维度的叠加结果。
+        </p>
+        <p>
+          2026 年下半年最值得关注的变化，是主流平台把“无遮挡”从画面问题升级为<strong>流量分发问题</strong>：同一条视频在有遮挡与无遮挡两个版本下，推荐权重可以相差 3 到 5 倍。同期，《夜航漫游》第三季、《夏日末班车》番外、《城南慢摇》系列等条目因复审通过而重新上架，也让“擦边”与“合规边界”的区分变得更具体。
+        </p>
+        <p>
+          这个领域真正需要被记录的信息有四类：<strong class="mark">平台细则条款</strong>（哪条规则管哪种画面）、<strong class="mark">条目状态</strong>（在架、限流、下架、复审中）、<strong class="mark">判定要素</strong>（服装、机位、时长、场景）、<strong class="mark">申诉与复核结果</strong>。本页把这四类信息按可检索的方式拆开，方便你按具体条目名或规则编号直接定位。
+        </p>
+      </div>
+    </section>
+
+    <!-- 2 精选内容推荐 -->
+    <section class="block" id="picks">
+      <div class="block-head">
+        <h2>精选条目 <small>按复审状态与讨论热度排序</small></h2>
+        <a class="more" href="/#timeline">看时间线 →</a>
+      </div>
+      <div class="card-grid">
+
+        <article class="card">
+          <div class="card-cover">
+            <img src="https://picsum.photos/seed/yehang-manyou31/400/300" width="400" height="300" alt="夜航漫游第三季无遮挡版本条目封面" loading="lazy">
+            <span class="card-type">剧情短剧</span>
+            <span class="card-score">8.6</span>
+          </div>
+          <div class="card-body">
+            <h3>《夜航漫游》第三季</h3>
+            <p>11 月 24 日复审通过重新上架，第 3 集起改为无遮挡版本。争议集中在夜店场景的镜头停留时长，平台标注为“限流解除、保留提示”。</p>
+            <div class="card-tags">
+              <span class="tag hot">复审通过</span><span class="tag">镜头时长</span><span class="tag">夜店场景</span>
+            </div>
+            <div class="card-meta"><span>更新至第 8 集</span><span>讨论 3.2 万</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-cover">
+            <img src="https://picsum.photos/seed/xiari-mobanche12/400/300" width="400" height="300" alt="夏日末班车番外篇条目封面" loading="lazy">
+            <span class="card-type">青春剧情</span>
+            <span class="card-score">8.1</span>
+          </div>
+          <div class="card-body">
+            <h3>《夏日末班车》番外</h3>
+            <p>泳池与更衣室两场戏采用侧面机位，服装覆盖度达标但场景暗示较强。目前处于“限流观察期”，搜索可见、推荐位不出现。</p>
+            <div class="card-tags">
+              <span class="tag hot">限流观察</span><span class="tag">场景暗示</span><span class="tag">侧面机位</span>
+            </div>
+            <div class="card-meta"><span>更新至番外 4</span><span>讨论 1.8 万</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-cover">
+            <img src="https://picsum.photos/seed/chengnan-manyao07/400/300" width="400" height="300" alt="城南慢摇系列舞蹈跟拍条目封面" loading="lazy">
+            <span class="card-type">舞蹈跟拍</span>
+            <span class="card-score">7.9</span>
+          </div>
+          <div class="card-body">
+            <h3>《城南慢摇》系列</h3>
+            <p>慢速跟拍加低机位仰拍，是今年被判定“擦边但不违规”的典型样本。第 12 期起创作者主动加了场景标注，限流次数下降明显。</p>
+            <div class="card-tags">
+              <span class="tag">低机位</span><span class="tag">主动标注</span><span class="tag">限流下降</span>
+            </div>
+            <div class="card-meta"><span>更新至第 18 期</span><span>讨论 2.4 万</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-cover">
+            <img src="https://picsum.photos/seed/yuanqi-shichang22/400/300" width="400" height="300" alt="元气试衣间穿搭展示条目封面" loading="lazy">
+            <span class="card-type">穿搭展示</span>
+            <span class="card-score">8.3</span>
+          </div>
+          <div class="card-body">
+            <h3>《元气试衣间》</h3>
+            <p>纯棚拍换装，无遮挡版本的重点在“连续快速换装”剪辑。平台判定属于正常穿搭内容，但要求补上“非成人向”说明。</p>
+            <div class="card-tags">
+              <span class="tag">棚拍</span><span class="tag">快速换装</span><span class="tag">合规样本</span>
+            </div>
+            <div class="card-meta"><span>更新至第 46 期</span><span>讨论 9,600</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-cover">
+            <img src="https://picsum.photos/seed/shenye-diantai05/400/300" width="400" height="300" alt="深夜电台直播切片条目封面" loading="lazy">
+            <span class="card-type">直播切片</span>
+            <span class="card-score">7.4</span>
+          </div>
+          <div class="card-body">
+            <h3>《深夜电台》直播切片</h3>
+            <p>语音为主、画面为辅的切片形态，争议点在于主播着装与镜头距离。11 月 19 日一场切片被下架，理由是“构图过近”。</p>
+            <div class="card-tags">
+              <span class="tag hot">已下架</span><span class="tag">构图距离</span><span class="tag">语音直播</span>
+            </div>
+            <div class="card-meta"><span>11-19 下架</span><span>讨论 7,200</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-cover">
+            <img src="https://picsum.photos/seed/lvtu-shouji18/400/300" width="400" height="300" alt="旅途手记生活记录条目封面" loading="lazy">
+            <span class="card-type">生活记录</span>
+            <span class="card-score">8.8</span>
+          </div>
+          <div class="card-body">
+            <h3>《旅途手记》海岛篇</h3>
+            <p>海滩场景占比高，但因全程远景与自然光，被平台划入“无风险”类别。适合用来对照“场景相似但判定不同”的案例。</p>
+            <div class="card-tags">
+              <span class="tag">远景</span><span class="tag">无风险</span><span class="tag">对照案例</span>
+            </div>
+            <div class="card-meta"><span>更新至第 9 集</span><span>讨论 5,100</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-cover">
+            <img src="https://picsum.photos/seed/wutai-hou01/400/300" width="400" height="300" alt="舞台后台纪实条目封面" loading="lazy">
+            <span class="card-type">幕后纪实</span>
+            <span class="card-score">7.7</span>
+          </div>
+          <div class="card-body">
+            <h3>《舞台后台》纪实</h3>
+            <p>后台换装环节采用遮挡剪辑，但花絮版本流出无遮挡片段，引发“正片合规、花絮不合规”的讨论，是典型的版本差异案例。</p>
+            <div class="card-tags">
+              <span class="tag">版本差异</span><span class="tag">花絮流出</span><span class="tag">遮挡剪辑</span>
+            </div>
+            <div class="card-meta"><span>11-12 花絮下架</span><span>讨论 1.1 万</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-cover">
+            <img src="https://picsum.photos/seed/lianwu-jichang33/400/300" width="400" height="300" alt="练舞日常训练室跟拍条目封面" loading="lazy">
+            <span class="card-type">训练跟拍</span>
+            <span class="card-score">8.0</span>
+          </div>
+          <div class="card-body">
+            <h3>《练舞日常》训练室</h3>
+            <p>训练服着装加高强度动作，属于“动作幅度”维度的高风险项。创作者在 11 月 15 日调整机位后，限流标记被解除。</p>
+            <div class="card-tags">
+              <span class="tag">动作幅度</span><span class="tag">机位调整</span><span class="tag hot">限流解除</span>
+            </div>
+            <div class="card-meta"><span>11-15 调整</span><span>讨论 8,300</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-cover">
+            <img src="https://picsum.photos/seed/laocheng-xiaochi09/400/300" width="400" height="300" alt="老城小吃夜市场景短剧条目封面" loading="lazy">
+            <span class="card-type">市井短剧</span>
+            <span class="card-score">8.5</span>
+          </div>
+          <div class="card-body">
+            <h3>《老城小吃》夜市篇</h3>
+            <p>市井题材、街头实拍，几乎没有争议元素，却被大量用户误判为“擦边”。可以作为练习判定尺度的低风险基准样本。</p>
+            <div class="card-tags">
+              <span class="tag">低风险</span><span class="tag">街头实拍</span><span class="tag">基准样本</span>
+            </div>
+            <div class="card-meta"><span>更新至第 22 集</span><span>讨论 4,400</span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 3 更新动态 -->
+    <section class="block" id="feed">
+      <div class="block-head">
+        <h2>最新更新与下架动态 <small>11 月 18 日 — 11 月 25 日</small></h2>
+      </div>
+      <div class="feed-list searchable">
+
+        <div class="feed-item">
+          <span class="feed-time">今天 09:30</span>
+          <div class="fi-main">
+            <div class="fi-name">《夜航漫游》第三季<span class="badge-new">NEW</span></div>
+            <p class="fi-desc">第 8 集上线，无遮挡版本同步开放，前 6 集限流标记全部解除。</p>
+          </div>
+        </div>
+
+        <div class="feed-item">
+          <span class="feed-time">今天 08:10</span>
+          <div class="fi-main">
+            <div class="fi-name">审核细则 v6.2 生效</div>
+            <p class="fi-desc">第 6 条“镜头停留时长”从 3 秒收紧到 2 秒，舞蹈类目受影响最大。</p>
+          </div>
+        </div>
+
+        <div class="feed-item">
+          <span class="feed-time">昨天 21:10</span>
+          <div class="fi-main">
+            <div class="fi-name">《深夜电台》切片下架</div>
+            <p class="fi-desc">11 月 19 日一场语音直播切片因构图过近被下架，创作者已提交申诉。</p>
+          </div>
+        </div>
+
+        <div class="feed-item">
+          <span class="feed-time">昨天 17:45</span>
+          <div class="fi-main">
+            <div class="fi-name">《城南慢摇》第 18 期</div>
+            <p class="fi-desc">新增场景标注卡片，本期未触发限流，评论区讨论判定标准变化。</p>
+          </div>
+        </div>
+
+        <div class="feed-item">
+          <span class="feed-time">11 月 23 日</span>
+          <div class="fi-main">
+            <div class="fi-name">《夏日末班车》番外 4</div>
+            <p class="fi-desc">泳池戏改用侧面机位后上架，仍处于限流观察期，推荐位不展示。</p>
+          </div>
+        </div>
+
+        <div class="feed-item">
+          <span class="feed-time">11 月 22 日</span>
+          <div class="fi-main">
+            <div class="fi-name">《练舞日常》机位调整</div>
+            <p class="fi-desc">训练室系列统一改为正面中景，限流标记在调整后 48 小时内解除。</p>
+          </div>
+        </div>
+
+        <div class="feed-item">
+          <span class="feed-time">11 月 21 日</span>
+          <div class="fi-main">
+            <div class="fi-name">《元气试衣间》第 46 期</div>
+            <p class="fi-desc">补上“非成人向”说明后恢复推荐，成为穿搭类合规改造的参考案例。</p>
+          </div>
+        </div>
+
+        <div class="feed-item">
+          <span class="feed-time">11 月 20 日</span>
+          <div class="fi-main">
+            <div class="fi-name">跨平台口径对照表更新</div>
+            <p class="fi-desc">新增 4 家平台的“场景暗示”判定差异，涵盖夜店、泳池、更衣室三类场景。</p>
+          </div>
+        </div>
+
+        <div class="feed-item">
+          <span class="feed-time">11 月 18 日</span>
+          <div class="fi-main">
+            <div class="fi-name">《舞台后台》花絮下架</div>
+            <p class="fi-desc">无遮挡花絮版本被清理，正片保留，形成“版本差异”典型判例。</p>
+          </div>
+        </div>
+
+        <div class="feed-item">
+          <span class="feed-time">11 月 18 日</span>
+          <div class="fi-main">
+            <div class="fi-name">《旅途手记》海岛篇第 9 集</div>
+            <p class="fi-desc">全程远景与自然光，被划入无风险类别，作为低风险对照样本收录。</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="search-empty" id="searchEmpty">没有匹配的条目，试试“夜航漫游”“审核细则”“限流”等具体关键词。</div>
+    </section>
+
+    <!-- 4 分类入口 -->
+    <section class="block" id="category">
+      <div class="block-head">
+        <h2>按内容类型进入 <small>八类垂类划分</small></h2>
+      </div>
+      <div class="cat-grid">
+        <a class="cat-item" href="/#picks"><b>剧情短剧</b><span>分集叙事、场景暗示为主的争议高发区</span><span class="cnt">收录 168 条</span></a>
+        <a class="cat-item" href="/#picks"><b>舞蹈跟拍</b><span>机位与动作幅度决定判定结果</span><span class="cnt">收录 122 条</span></a>
+        <a class="cat-item" href="/#picks"><b>穿搭展示</b><span>棚拍换装类，合规改造空间较大</span><span class="cnt">收录 96 条</span></a>
+        <a class="cat-item" href="/#feed"><b>直播切片</b><span>构图距离与着装是主要风险点</span><span class="cnt">收录 84 条</span></a>
+        <a class="cat-item" href="/#picks"><b>生活记录</b><span>海滩、泳池等场景的判定基准样本</span><span class="cnt">收录 71 条</span></a>
+        <a class="cat-item" href="/#deep"><b>审核规则</b><span>各平台细则条款与版本变更记录</span><span class="cnt">收录 312 条</span></a>
+        <a class="cat-item" href="/#news"><b>申诉复核</b><span>复审通过、限流解除与驳回案例</span><span class="cnt">收录 58 条</span></a>
+        <a class="cat-item" href="/#timeline"><b>版本差异</b><span>正片、花絮、无遮挡版本的对照</span><span class="cnt">收录 43 条</span></a>
+      </div>
+    </section>
+
+    <!-- 5 深度解析 -->
+    <section class="block" id="deep">
+      <div class="block-head">
+        <h2>深度解析：无遮挡内容的四维判定与平台差异</h2>
+      </div>
+      <div class="article">
+        <h3>一、判定从来不是看题材，而是看四个维度的叠加</h3>
+        <p>
+          很多人以为“泳装就是擦边、羽绒服就安全”，这是最容易踩的判断误区。实际审核中，同一条内容会先被拆成<strong>服装覆盖度、镜头语言、动作幅度、场景暗示</strong>四个维度分别打分，再看叠加结果。一个维度超标通常只触发限流，两个以上维度同时踩线才会进入下架流程。
+        </p>
+        <p>
+          《旅途手记》海岛篇和《夏日末班车》番外是最典型的对照：前者海滩场景占比更高，但全程远景、自然光、无特写机位，最终被划入无风险；后者服装覆盖度达标，却因为泳池与更衣室两个场景的暗示叠加，进入限流观察期。场景相似、结论相反，差别就在另外三个维度。
+        </p>
+
+        <h3>二、镜头语言的三个硬指标</h3>
+        <p>
+          镜头语言是四维中最容易被量化的部分，2026 年 11 月版细则里主要看三项：
+        </p>
+        <ul>
+          <li><strong>停留时长</strong>：同一机位在同一身体区域的连续停留，v6.2 起从 3 秒收紧到 2 秒，舞蹈类目受影响最大。</li>
+          <li><strong>机位高度</strong>：低机位仰拍会被单独标记，《城南慢摇》系列长期处于这一项的边缘。</li>
+          <li><strong>构图距离</strong>：人物在画面中的占比超过阈值时触发“过近”判定，《深夜电台》切片下架正是这一项。</li>
+        </ul>
+        <p>
+          三项指标里，停留时长和构图距离有明确数值，机位高度则依赖人工复核，这也是不同平台结论差异最大的地方。
+        </p>
+
+        <h3>三、不同平台的差异到底差在哪</h3>
+        <p>
+          把 4 家主流平台的细则横向对照，会发现差异集中在两处：场景暗示的权重，以及无遮挡版本是否单独计算。
+        </p>
+        <div class="cmp">
+          <div><b>重场景派</b><span>场景暗示权重最高，夜店、更衣室、泳池三类场景一旦出现即进入人工复核，服装与机位达标也难直接放行。</span></div>
+          <div><b>重机位派</b><span>以镜头语言为主，场景权重较低，低机位与过近构图是硬门槛，达标后泳池、海滩类内容可正常推荐。</span></div>
+          <div><b>重版本派</b><span>正片与花絮、有遮挡与无遮挡分开计算，《舞台后台》花絮下架、正片保留就是这一逻辑的产物。</span></div>
+        </div>
+        <p>
+          对创作者来说，这意味着“同一条内容发多个平台”需要按平台重点分别调整：在重场景派平台降场景暗示，在重机位派平台改机位，在重版本派平台清理花絮流出。
+        </p>
+
+        <h3>四、无遮挡版本为什么更容易被判超标</h3>
+        <p>
+          遮挡处理本身会削弱画面信息量，一旦去掉遮挡，原本被稀释的停留时长、构图距离、动作幅度都会变得更“实”。这也是为什么很多条目“有遮挡版本无事、无遮挡版本限流”。<strong>无遮挡并不等于违规，但它把原本分散在四个维度上的风险集中暴露出来。</strong>
+        </p>
+        <p>
+          更现实的一点是分发机制：平台对无遮挡版本通常不额外降权，但会提高人工抽检比例。抽检比例上升，意味着同一条内容被复核到的概率显著变高，最终表现为“看起来像是无遮挡才被限流”。
+        </p>
+
+        <h3>五、创作者可操作的三个调整方向</h3>
+        <ul>
+          <li><strong>机位前置</strong>：拍摄前先确定机位高度与构图距离，比拍完再剪更省事，《练舞日常》改成正面中景后 48 小时解除限流。</li>
+          <li><strong>场景标注</strong>：主动标注场景性质与内容定位，《城南慢摇》第 12 期起加标注，限流次数明显下降。</li>
+          <li><strong>版本管理</strong>：正片、花絮、无遮挡版本分开管理，避免花絮流出造成整体风险，《舞台后台》就是反例。</li>
+        </ul>
+        <p>
+          这三项调整的共同点是：都不改变内容本身的表达，只改变风险暴露的方式。对绝大多数条目来说，这已经足够把状态从“限流”拉回“正常推荐”。
+        </p>
+      </div>
+    </section>
+
+    <!-- 6 体验指南 -->
+    <section class="block" id="guide">
+      <div class="block-head">
+        <h2>体验指南：怎么判断一条无遮挡内容值不值得花时间</h2>
+      </div>
+      <p class="lead">先看状态，再看类型，最后才看内容本身。顺序错了，很容易把时间花在已经被限流或即将下架的条目上。</p>
+      <div class="steps">
+        <div class="step">
+          <div>
+            <b>第一步：确认条目当前状态</b>
+            <span>在架、限流、下架、复审中，四种状态对应完全不同的可看性。限流条目通常搜索可见但推荐位不出现，下架条目则连搜索都难以命中，先确认状态能省掉大量无效查找。</span>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <b>第二步：按类型判断风险密度</b>
+            <span>剧情短剧与舞蹈跟拍是争议高发区，剧情类看场景暗示，舞蹈类看机位与动作幅度；穿搭展示与生活记录整体风险低，适合作为判断尺度的基准样本。</span>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <b>第三步：对照四个维度自评</b>
+            <span>服装覆盖度、镜头语言、动作幅度、场景暗示，逐项打勾。单项超标基本只是限流，两项以上同时踩线才需要谨慎投入时间。</span>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <b>第四步：看版本差异再决定</b>
+            <span>正片合规不代表花絮合规，无遮挡版本与有遮挡版本也可能结论不同。先看版本说明，再看内容，能避免大量“看到一半发现被清理”的情况。</span>
+          </div>
+        </div>
+        <div class="step">
+          <div>
+            <b>第五步：用相似条目做横向比较</b>
+            <span>同类条目之间比较停留时长、机位高度、场景占比三项，比单看一条更容易建立稳定判断。这也是本页把对照案例单独列出的原因。</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 FAQ -->
+    <section class="block" id="faq">
+      <div class="block-head">
+        <h2>常见问题 <small>围绕判定标准与条目状态</small></h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>无遮挡版本一定比有遮挡版本更容易被限流吗？</summary>
+          <div class="ans">不一定，但概率更高。遮挡会削弱画面信息量，去掉遮挡后停留时长、构图距离、动作幅度都会更“实”，更容易触发人工抽检。限流与否最终仍取决于四个维度的叠加结果，而不是“有没有遮挡”本身。</div>
+        </details>
+        <details>
+          <summary>擦边视频无打马和直接违规内容怎么区分？</summary>
+          <div class="ans">核心看是否触碰明示红线。擦边内容通常服装覆盖度达标、无直接暴露，争议集中在镜头语言与场景暗示；直接违规内容则会在画面本身出现明确红线元素。前者多进入限流或人工复核，后者直接下架并可能影响账号。</div>
+        </details>
+        <details>
+          <summary>第一次接触这类内容，从哪些条目开始看比较好？</summary>
+          <div class="ans">建议先看低风险基准样本，比如《旅途手记》海岛篇和《老城小吃》夜市篇，建立“什么不算擦边”的参照；再看《元气试衣间》这类合规改造案例，理解调整前后的差异，最后再看争议条目，判断会更稳。</div>
+        </details>
+        <details>
+          <summary>《夜航漫游》第三季为什么能复审通过重新上架？</summary>
+          <div class="ans">据条目记录，第 3 集起改为无遮挡版本的同时，夜店场景的镜头停留时长被压到 2 秒以内，并补充了场景说明。复审通过后限流标记解除，但平台仍保留内容提示，属于“解除限流、保留提示”的处理方式。</div>
+        </details>
+        <details>
+          <summary>不同平台对同一条内容的判定为什么差这么多？</summary>
+          <div class="ans">差异集中在两处：场景暗示的权重，以及无遮挡版本是否单独计算。重场景派平台一旦出现夜店、更衣室、泳池场景就进入人工复核；重机位派平台以镜头语言为主，场景达标即可正常推荐。</div>
+        </details>
+        <details>
+          <summary>被限流之后，创作者一般多久能恢复？</summary>
+          <div class="ans">没有统一时长。从收录案例看，机位或构图类问题在调整后 48 小时内解除限流的较多，如《练舞日常》；场景暗示类问题通常需要复审，周期在一到三周；涉及花絮流出的版本问题，则需要先清理版本再申诉。</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8 用户评论 -->
+    <section class="block" id="comments">
+      <div class="block-head">
+        <h2>社区评论 <small>来自条目讨论区</small></h2>
+      </div>
+      <div class="comment-grid">
+        <div class="cm"><div class="cm-head"><span class="avatar" style="background:#ff4d6d">林</span><span class="cm-name">林间小径</span><span class="cm-time">今天 10:22</span></div><p class="cm-text">《夜航漫游》第三季第 8 集确实把夜店那段的停留时长压下来了，肉眼能看出来剪辑节奏变了，复审通过不意外。</p></div>
+        <div class="cm"><div class="cm-head"><span class="avatar" style="background:#7c8cff">陈</span><span class="cm-name">陈默不默</span><span class="cm-time">今天 09:14</span></div><p class="cm-text">v6.2 把停留时长从 3 秒改到 2 秒，舞蹈区影响太大了，好几个跟拍号这两天都在改机位。</p></div>
+        <div class="cm"><div class="cm-head"><span class="avatar" style="background:#38d9c4">苏</span><span class="cm-name">苏打水加冰</span><span class="cm-time">昨天 22:40</span></div><p class="cm-text">《夏日末班车》番外改成侧面机位之后其实观感没差多少，限流观察期这个处理算比较合理了。</p></div>
+        <div class="cm"><div class="cm-head"><span class="avatar" style="background:#ffb020">周</span><span class="cm-name">周末不加班</span><span class="cm-time">昨天 20:05</span></div><p class="cm-text">《深夜电台》那个切片下架我觉得有点严，语音直播本来画面就不是重点，构图过近这个理由挺模糊的。</p></div>
+        <div class="cm"><div class="cm-head"><span class="avatar" style="background:#ff8a3d">何</span><span class="cm-name">何处不相逢</span><span class="cm-time">昨天 18:31</span></div><p class="cm-text">《城南慢摇》加场景标注这招真有用，第 18 期全程没触发限流，说明主动说明确实能降低抽检概率。</p></div>
+        <div class="cm"><div class="cm-head"><span class="avatar" style="background:#7c8cff">吴</span><span class="cm-name">吴一一</span><span class="cm-time">昨天 16:12</span></div><p class="cm-text">《舞台后台》花絮流出那段真的典型，正片没事、花絮被清，版本管理这块很多团队都没当回事。</p></div>
+        <div class="cm"><div class="cm-head"><span class="avatar" style="background:#38d9c4">郑</span><span class="cm-name">郑在发呆</span><span class="cm-time">11 月 24 日</span></div><p class="cm-text">《元气试衣间》第 46 期补“非成人向”说明之后恢复推荐，这个改造思路值得穿搭号直接抄。</p></div>
+        <div class="cm"><div class="cm-head"><span class="avatar" style="background:#ff4d6d">许</span><span class="cm-name">许愿不灵</span><span class="cm-time">11 月 24 日</span></div><p class="cm-text">《旅途手记》海岛篇被当成低风险基准样本有点意思，海滩场景那么多反而没事，说明场景本身真不是决定项。</p></div>
+        <div class="cm"><div class="cm-head"><span class="avatar" style="background:#ffb020">冯</span><span class="cm-name">冯唐易老</span><span class="cm-time">11 月 23 日</span></div><p class="cm-text">跨平台口径对照表更新得挺及时，夜店、泳池、更衣室三类场景的差异列得很清楚，做多平台分发的能省不少试错。</p></div>
+        <div class="cm"><div class="cm-head"><span class="avatar" style="background:#38d9c4">卫</span><span class="cm-name">卫斯理不姓卫</span><span class="cm-time">11 月 23 日</span></div><p class="cm-text">《练舞日常》改正面中景 48 小时解除限流，这个数据比什么攻略都直观，机位前置确实比后期剪更省事。</p></div>
+        <div class="cm"><div class="cm-head"><span class="avatar" style="background:#ff8a3d">蒋</span><span class="cm-name">蒋道理</span><span class="cm-time">11 月 22 日</span></div><p class="cm-text">《老城小吃》夜市篇被误判成擦边的人是真不少，看完这个基准样本再回头看争议条目，判断会稳很多。</p></div>
+        <div class="cm"><div class="cm-head"><span class="avatar" style="background:#7c8cff">沈</span><span class="cm-name">沈默的羔羊</span><span class="cm-time">11 月 22 日</span></div><p class="cm-text">说实话四维判定这套拆法比我之前看到的都清楚，尤其是“单项超标只限流、两项以上才下架”这个说法。</p></div>
+        <div class="cm"><div class="cm-head"><span class="avatar" style="background:#ff4d6d">韩</span><span class="cm-name">韩梅梅</span><span class="cm-time">11 月 21 日</span></div><p class="cm-text">对《夏日末班车》番外还是有点不同意见，泳池戏的暗示其实不强，主要还是机位问题吧。</p></div>
+        <div class="cm"><div class="cm-head"><span class="avatar" style="background:#38d9c4">曹</span><span class="cm-name">曹阿瞒</span><span class="cm-time">11 月 21 日</span></div><p class="cm-text">《夜航漫游》第三季重新上架那天讨论区直接刷屏，等了快两个月，第 8 集确实没让人失望。</p></div>
+      </div>
+    </section>
+
+    <!-- 9 相关资讯 -->
+    <section class="block" id="news">
+      <div class="block-head">
+        <h2>相关资讯 <small>近 30 天动态</small></h2>
+      </div>
+      <div class="news-list">
+        <article class="news-item">
+          <div class="news-thumb"><img src="https://picsum.photos/seed/news-xize62/600/400" width="600" height="400" alt="审核细则 v6.2 发布的资讯配图" loading="lazy"></div>
+          <div class="news-body">
+            <h3>审核细则 v6.2 发布：镜头停留时长收紧至 2 秒</h3>
+            <p>新版本 11 月 25 日生效，舞蹈跟拍与训练室类目受影响最大，多家创作者已在调整机位。</p>
+            <div class="news-meta"><span>2026-11-25</span><span>规则变更</span></div>
+          </div>
+        </article>
+        <article class="news-item">
+          <div class="news-thumb"><img src="https://picsum.photos/seed/news-yehang11/600/400" width="600" height="400" alt="夜航漫游第三季复审通过的资讯配图" loading="lazy"></div>
+          <div class="news-body">
+            <h3>《夜航漫游》第三季复审通过，第 8 集恢复推荐</h3>
+            <p>夜店场景镜头停留时长压至 2 秒以内，限流标记解除，平台保留内容提示。</p>
+            <div class="news-meta"><span>2026-11-24</span><span>条目状态</span></div>
+          </div>
+        </article>
+        <article class="news-item">
+          <div class="news-thumb"><img src="https://picsum.photos/seed/news-shenyeditai03/600/400" width="600" height="400" alt="深夜电台切片下架的资讯配图" loading="lazy"></div>
+          <div class="news-body">
+            <h3>《深夜电台》直播切片因构图过近下架，申诉中</h3>
+            <p>11 月 19 日一场语音直播切片被清理，创作者已提交申诉，讨论焦点转向构图距离阈值。</p>
+            <div class="news-meta"><span>2026-11-20</span><span>下架记录</span></div>
+          </div>
+        </article>
+        <article class="news-item">
+          <div class="news-thumb"><img src="https://picsum.photos/seed/news-koujing07/600/400" width="600" height="400" alt="跨平台口径对照表更新的资讯配图" loading="lazy"></div>
+          <div class="news-body">
+            <h3>跨平台口径对照表更新，新增四家平台场景差异</h3>
+            <p>夜店、泳池、更衣室三类场景的判定差异被单独列出，多平台分发团队已开始按平台调整内容。</p>
+            <div class="news-meta"><span>2026-11-20</span><span>口径对照</span></div>
+          </div>
+        </article>
+        <article class="news-item">
+          <div class="news-thumb"><img src="https://picsum.photos/seed/news-wutai09/600/400" width="600" height="400" alt="舞台后台花絮下架的资讯配图" loading="lazy"></div>
+          <div class="news-body">
+            <h3>《舞台后台》花絮版本被清理，正片保留</h3>
+            <p>无遮挡花絮流出引发讨论，形成“正片合规、花絮不合规”的典型版本差异判例。</p>
+            <div class="news-meta"><span>2026-11-18</span><span>版本差异</span></div>
+          </div>
+        </article>
+        <article class="news-item">
+          <div class="news-thumb"><img src="https://picsum.photos/seed/news-lianwu04/600/400" width="600" height="400" alt="练舞日常机位调整的资讯配图" loading="lazy"></div>
+          <div class="news-body">
+            <h3>《练舞日常》统一改正面中景，48 小时解除限流</h3>
+            <p>训练室系列机位调整后限流标记解除，成为“机位前置”策略的代表案例。</p>
+            <div class="news-meta"><span>2026-11-22</span><span>限流解除</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 10 相关推荐 -->
+    <section class="block" id="reco">
+      <div class="block-head">
+        <h2>相关推荐 <small>延伸方向与对照标签</small></h2>
+      </div>
+      <div class="reco-wrap">
+        <a class="reco" href="/#deep">镜头停留时长判定</a>
+        <a class="reco" href="/#deep">低机位仰拍风险</a>
+        <a class="reco" href="/#deep">构图距离阈值</a>
+        <a class="reco" href="/#category">场景暗示权重对照</a>
+        <a class="reco" href="/#faq">无遮挡与有遮挡版本差异</a>
+        <a class="reco" href="/#feed">限流解除周期记录</a>
+        <a class="reco" href="/#timeline">复审通过案例索引</a>
+        <a class="reco" href="/#picks"><b>《城南慢摇》</b>标注策略</a>
+      </div>
+    </section>
+
+    <!-- 11 补充板块：时间线 -->
+    <section class="block" id="timeline">
+      <div class="block-head">
+        <h2>条目状态时间线 <small>11 月 12 日 — 11 月 25 日</small></h2>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <span class="tl-date">2026-11-25</span>
+          <b>审核细则 v6.2 生效</b>
+          <span>停留时长从 3 秒收紧至 2 秒，舞蹈与训练室类目进入集中调整期。</span>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">2026-11-24</span>
+          <b>《夜航漫游》第三季复审通过</b>
+          <span>第 3 集起改为无遮挡版本，夜店场景停留时长压至 2 秒以内，限流解除。</span>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">2026-11-23</span>
+          <b>《夏日末班车》番外 4 上架</b>
+          <span>泳池戏改用侧面机位，服装覆盖度达标，仍处于限流观察期。</span>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">2026-11-22</span>
+          <b>《练舞日常》机位调整完成</b>
+          <span>训练室系列统一改正面中景，48 小时内限流标记解除。</span>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">2026-11-20</span>
+          <b>《深夜电台》切片下架</b>
+          <span>11 月 19 日语音直播切片因构图过近被清理，申诉流程启动。</span>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">2026-11-18</span>
+          <b>《舞台后台》花絮版本被清理</b>
+          <span>无遮挡花絮流出，正片保留，形成版本差异典型判例。</span>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">2026-11-12</span>
+          <b>《元气试衣间》补“非成人向”说明</b>
+          <span>说明补充后恢复推荐，成为穿搭类合规改造参考。</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 右辅助栏 -->
+  <aside class="side-right">
+    <div class="side-card">
+      <p class="side-title">本周讨论热榜</p>
+      <ul class="rank-list">
+        <li><span class="rank-no">1</span><div class="rk-main"><b>《夜航漫游》第 8 集</b><span>复审通过 · 3.2 万讨论</span></div></li>
+        <li><span class="rank-no">2</span><div class="rk-main"><b>审核细则 v6.2</b><span>停留时长收紧 · 2.7 万</span></div></li>
+        <li><span class="rank-no">3</span><div class="rk-main"><b>《城南慢摇》第 18 期</b><span>场景标注 · 2.4 万</span></div></li>
+        <li><span class="rank-no">4</span><div class="rk-main"><b>《夏日末班车》番外</b><span>限流观察 · 1.8 万</span></div></li>
+        <li><span class="rank-no">5</span><div class="rk-main"><b>《舞台后台》花絮</b><span>版本差异 · 1.1 万</span></div></li>
+        <li><span class="rank-no">6</span><div class="rk-main"><b>《练舞日常》机位</b><span>限流解除 · 8,300</span></div></li>
+      </ul>
+    </div>
+
+    <div class="side-card">
+      <p class="side-title">实时更新流</p>
+      <ul class="update-feed">
+        <li><b>《夜航漫游》第 8 集</b>上线<time>今天 09:30</time></li>
+        <li><b>审核细则 v6.2</b>生效<time>今天 08:10</time></li>
+        <li><b>《深夜电台》</b>申诉受理<time>昨天 21:10</time></li>
+        <li><b>《城南慢摇》</b>第 18 期无触发<time>昨天 17:45</time></li>
+        <li><b>口径对照表</b>新增四家平台<time>11 月 20 日</time></li>
+      </ul>
+    </div>
+
+    <div class="side-card">
+      <p class="side-title">判定四维度</p>
+      <ul class="chan-list">
+        <li><a href="/#deep">服装覆盖度</a></li>
+        <li><a href="/#deep">镜头语言</a></li>
+        <li><a href="/#deep">动作幅度</a></li>
+        <li><a href="/#deep">场景暗示</a></li>
+      </ul>
+    </div>
+  </aside>
+
+</div>
+
+<!-- 页尾 -->
+<footer class="site-footer">
+  <div class="ft-inner">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <a class="logo" href="/#top">
+          <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect x="2" y="8" width="36" height="24" rx="7" fill="none" stroke="url(#lg1)" stroke-width="2.4"/>
+            <path d="M16 15.5 L26 20 L16 24.5 Z" fill="url(#lg1)"/>
+            <path d="M30 4 L34 8 M10 4 L6 8" stroke="#38d9c4" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text">擦边视频<em>无打马</em></span>
+        </a>
+        <p>记录无马赛克擦边短视频的平台规则、条目状态与判定要素，服务内容审核、创作者与短视频重度用户的判断需求。</p>
+      </div>
+      <div class="ft-col">
+        <h4>内容频道</h4>
+        <ul>
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#picks">精选条目</a></li>
+          <li><a href="/#feed">更新动态</a></li>
+          <li><a href="/#category">分类入口</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>判断参考</h4>
+        <ul>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#timeline">条目时间线</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>社区与资讯</h4>
+        <ul>
+          <li><a href="/#comments">社区评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#reco">相关推荐</a></li>
+          <li><a href="/#top">回到顶部</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span class="disc">
+        条目状态依据平台公示、创作者自述与社区复核三源交叉标注，规则条款以 2026 年 11 月版细则为准。页面内容为信息整理与判断参考，不构成任何平台的官方说明。
+      </span>
+      <span>© 2026 擦边视频无打马 · 内容档案</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle = document.getElementById('menuToggle');
+  var nav = document.getElementById('hdNav');
+  if(toggle && nav){
+    toggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var input = document.getElementById('searchInput');
+  var btn = document.getElementById('searchBtn');
+  var empty = document.getElementById('searchEmpty');
+  var feed = document.getElementById('feed');
+  var items = feed ? Array.prototype.slice.call(feed.querySelectorAll('.feed-item')) : [];
+
+  function runSearch(){
+    var q = (input.value || '').trim().toLowerCase();
+    if(!items.length) return;
+    if(!q){
+      items.forEach(function(it){ it.style.display = ''; });
+      if(empty) empty.classList.remove('on');
+      return;
+    }
+    var hit = 0;
+    items.forEach(function(it){
+      var text = (it.textContent || '').toLowerCase();
+      var match = text.indexOf(q) > -1;
+      it.style.display = match ? '' : 'none';
+      if(match) hit++;
+    });
+    if(empty) empty.classList.toggle('on', hit === 0);
+    if(hit > 0){
+      document.getElementById('feed').scrollIntoView({behavior:'smooth', block:'start'});
+    }
+  }
+
+  if(btn) btn.addEventListener('click', runSearch);
+  if(input){
+    input.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); runSearch(); }
+    });
+    input.addEventListener('input', function(){
+      if(!input.value.trim() && empty) empty.classList.remove('on');
+    });
+  }
+})();
+</script>
+</body>
+                                                                                                       </html>
